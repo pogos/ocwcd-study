@@ -22,7 +22,7 @@
 #### Web application structure
 
 
-####Deploying descriptor
+#### Deploying descriptor
 
 #### Servlet
 * Servlet - basic interface
@@ -33,6 +33,27 @@
 
 ##### ServletConfig
 
+##### Request Dispatcher  
+
+
+```
+RequestDispatcher requestDispatcher =
+    request.getRequestDispatcher("/anotherURL.simple");
+
+requestDispatcher.forward(request, response);
+
+requestDispatcher.include(request, response);
+```
+
+##### Servlet Request/Response Wrapper
+Request:
+* ServletRequestWrapper
+* HttpServletRequestWrapper
+
+Response:
+* ServletResponseWrapper
+* HttpServletResponseWrapper
+
 #### Servlet Listeners
 * ServletContextAttributeListener
 * HttpSessionListener
@@ -42,6 +63,8 @@
 * HttpSessionAttributeListener
 * ServletContextListener
 * HttpSessionActivationListener
+
+####
 
 
 #### Http Session
